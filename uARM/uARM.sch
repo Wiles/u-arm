@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:uARM-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -754,12 +755,6 @@ Wire Wire Line
 Connection ~ 5100 1350
 Wire Wire Line
 	4950 1550 5050 1550
-Wire Bus Line
-	6550 1200 6550 3450
-Wire Bus Line
-	8150 1200 8150 3850
-Wire Bus Line
-	5950 1200 5950 4350
 Wire Wire Line
 	5150 1550 5250 1550
 Wire Wire Line
@@ -769,4 +764,61 @@ Wire Wire Line
 Connection ~ 7350 2550
 Wire Wire Line
 	7350 2450 7350 2550
+$Comp
+L Connector_Generic:Conn_01x06 J2
+U 1 1 5B7BB327
+P 1950 3050
+F 0 "J2" H 1870 2525 50  0000 C CNN
+F 1 "FTDI" H 1870 2616 50  0000 C CNN
+F 2 "" H 1950 3050 50  0001 C CNN
+F 3 "~" H 1950 3050 50  0001 C CNN
+	1    1950 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5B7BB3F1
+P 2250 3350
+F 0 "#PWR0112" H 2250 3100 50  0001 C CNN
+F 1 "GND" H 2255 3177 50  0000 C CNN
+F 2 "" H 2250 3350 50  0001 C CNN
+F 3 "" H 2250 3350 50  0001 C CNN
+	1    2250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3250 2250 3250
+Wire Wire Line
+	2250 3250 2250 3350
+$Comp
+L power:+5V #PWR0113
+U 1 1 5B7C065D
+P 2500 2950
+F 0 "#PWR0113" H 2500 2800 50  0001 C CNN
+F 1 "+5V" H 2515 3123 50  0000 C CNN
+F 2 "" H 2500 2950 50  0001 C CNN
+F 3 "" H 2500 2950 50  0001 C CNN
+	1    2500 2950
+	1    0    0    -1  
+$EndComp
+Text GLabel 2250 2850 2    39   Input ~ 0
+TX
+Text GLabel 2250 2950 2    39   Input ~ 0
+RX
+Wire Wire Line
+	2150 2850 2250 2850
+Wire Wire Line
+	2250 2950 2150 2950
+Wire Wire Line
+	2500 3050 2500 2950
+Wire Wire Line
+	2150 3050 2500 3050
+NoConn ~ 2150 3150
+NoConn ~ 2150 2750
+Wire Bus Line
+	6550 1200 6550 3450
+Wire Bus Line
+	8150 1200 8150 3850
+Wire Bus Line
+	5950 1200 5950 4350
 $EndSCHEMATC
