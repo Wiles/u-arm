@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name SIMM)(type KiCad)(uri ${KIPRJMOD}/SIMM.pretty)(options "")(descr ""))
+)
